@@ -45,6 +45,7 @@ for(let pattern of winpatterns){
         if(pos1==pos2&&pos2==pos3){
             alert(turn+" is winner");
             display.innerText=turn+" is winner";
+            display.style.backgroundColor="green";
             for(let box of boxes){
                 box.disabled=true;
             }
