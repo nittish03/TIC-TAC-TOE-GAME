@@ -5,7 +5,7 @@ resetbutton.onclick=()=>{
     document.location.reload();
 }
 // let a=document.getElementById("1")
-let turn="player1";
+let turn="Player 1";
 const winpatterns=[
     [0,1,2],
     [3,4,5],
@@ -22,14 +22,14 @@ const winpatterns=[
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         console.log("box was clicked");
-        if(turn=="player1"){
+        if(turn=="Player 1"){
             box.innerText="X";
-            turn="player2";
+            turn="Player 2";
             display.innerText=turn;
-            console.log("box was clicked by player1");
-        }else if(turn=="player2"){
+            console.log("box was clicked by Player 1");
+        }else if(turn=="Player 2"){
             box.innerText="O";
-            turn="player1";
+            turn="Player 1";
             display.innerText=turn;
             console.log("box was clicked by player 2");
         }box.disabled=true;
@@ -43,7 +43,9 @@ for(let pattern of winpatterns){
     let pos3=boxes[pattern[2]].innerText;
     if(pos1!=""&&pos2!=""&&pos3!=""){
         if(pos1==pos2&&pos2==pos3){
-            alert(turn+" is winner");
+            setTimeout(() => {
+                alert(turn+" is winner");
+            }, 500);
             display.innerText=turn+" is winner";
             display.style.backgroundColor="green";
             for(let box of boxes){
