@@ -5,7 +5,9 @@ import { Routes, Route } from'react-router-dom'
 
 const App = () => {
   return (
-<>
+<> 
+
+
 <Routes>
   <Route path="singleplayer" element={<SinglePlayer/>} />
   <Route path="multiplayer" element={<Multiplayer/>} />
