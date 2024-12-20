@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React from 'react'
 import SinglePlayer from './components/SinglePlayer'
 import Multiplayer from './components/Multiplayer'
 import { Routes, Route } from'react-router-dom'
