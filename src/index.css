@@ -1,0 +1,103 @@
+*{
+  background-color: #3498db; /* Changed to a more appealing blue */
+
+}
+b {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3498db; /* Changed to a more appealing blue */
+  font-family: 'Roboto', sans-serif; /* Modern, clean font */
+}
+
+#container {
+  max-width: 400px; /* Max width for larger screens */
+  width: 100%; /* Responsive width */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Increased gap for better spacing */
+  margin-bottom: 20px;
+}
+
+.box {
+  height: 100px;
+  width: calc(33.333% - 10px); /* Responsive width */
+  max-width: 100px;
+  border-radius: 12px; /* Increased roundness */
+  border: none;
+  font-size: 48px; /* Slightly smaller for better fit */
+  font-weight: bold;
+  background-color: #f1c40f; /* Vibrant yellow */
+  color: #2c3e50; /* Dark blue-gray for contrast */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+#single-player{
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #cc2e2e; /* Fresh green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: #2ecc71; /* Fresh green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#reset:hover {
+  background-color: #27ae60;
+}
+
+#turn {
+  height: 50px;
+  width: 250px;
+  background-color: #ecf0f1; /* Light gray */
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+  #container {
+      width: 95%;
+  }
+  
+  .box {
+      height: 80px;
+      font-size: 36px;
+  }
+  
+  #turn {
+      width: 90%;
+      font-size: 20px;
+  }
+  
+  #reset {
+      font-size: 20px;
+  }
+}
